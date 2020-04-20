@@ -1,10 +1,10 @@
-class Api {
+export class Api {
   constructor(options) {
     this.baseUrl = options.baseUrl;
     this.authorization = options.headers.authorization;
     this.contentType = options.headers['Content-Type'];
   }
-  bodyObject = {};
+  
   requestToServer(url, method, bodyObject) {
     return fetch(url, {
       method: method,

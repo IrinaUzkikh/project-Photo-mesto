@@ -1,7 +1,9 @@
+import {popupCard as popupContainer} from './index.js';
+import {Popup} from './popup.js';
 class PopupCard extends Popup {
   constructor (popupContainer) {
-    super (popupContainer);
-    document.querySelector('#card-close').addEventListener('click', this.closeFormCard.bind(this));
+    this.popupContainer = popupContainer;
+    this.popupContainer.querySelector('#card-close').addEventListener('click', this.closeFormCard.bind(this));
   }
 
     createImg(event) {
@@ -19,4 +21,5 @@ class PopupCard extends Popup {
       this.popupContainer.querySelector('#img-popup').remove();
     }
 }
+export {PopupCard};
   

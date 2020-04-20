@@ -1,11 +1,29 @@
 'use strict'
+import "./style.css";
+import {Api} from './api.js';
+import {Card} from './card.js';
+import {CardList} from './cardList.js';
+import {FormValidator} from './formValidator.js';
+import {Popup} from './popup.js';
+import {PopupAnotherButton} from './popupAnotherButton.js';
+import {PopupCard} from './popupCard.js';
+import {UserInfo} from './userInfo.js';
+
+let placesListHtml = document.querySelector('.places-list');
+let popupPlace = document.querySelector('#popup-place');
+let popupProfile = document.querySelector('#popup-profile');
+let popupAvatar = document.querySelector('#popup-avatar');
+let popupCard = document.querySelector('#popup-card');
+console.log(document);
 
 const card = new Card();
-const placesList = new CardList(document.querySelector('.places-list'), card);
-const popupContainerPlace = new Popup(document.querySelector('#popup-place'));
-const popupContainerProfile = new PopupAnotherButton(document.querySelector('#popup-profile'));
-const popupContainerAvatar = new PopupAnotherButton(document.querySelector('#popup-avatar'));
-const popupContainerCard = new PopupCard(document.querySelector('#popup-card'));
+const placesList = new CardList(placesListHtml, card);
+const popupContainerPlace = new Popup(popupPlace);
+const popupContainerProfile = new PopupAnotherButton(popupProfile);
+const popupContainerAvatar = new PopupAnotherButton(popupAvatar);
+//const popupContainerProfile = new Popup(document.querySelector('#popup-profile'));
+//const popupContainerAvatar = new Popup(document.querySelector('#popup-avatar'));
+const popupContainerCard = new PopupCard(popupCard);
 const formValidator = new FormValidator();
 const userInfo = new UserInfo();
 const api = new Api({
@@ -18,6 +36,7 @@ const api = new Api({
 const formPlace = document.forms.new;
 const formProfile = document.forms.profile;
 const formAvatar = document.forms.avatar;
+export {placesListHtml, popupPlace, popupProfile, popupAvatar, popupCard, api, card};
 
 //функция, которая при загрузке меняет текст кнопки на "Загрузка..."
 function renderLoading(isLoading, element, text) {

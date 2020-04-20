@@ -1,9 +1,10 @@
-class Popup {
+import {popupPlace as popupContainer} from './index';
+export class Popup {
   constructor(popupContainer) {
     this.popupContainer = popupContainer;
-    document.querySelector('#profile-close').addEventListener('click', this.close.bind(this));
-    document.querySelector('#place-close').addEventListener('click', this.close.bind(this));
-    document.querySelector('#avatar-close').addEventListener('click', this.close.bind(this));
+    this.popupContainer.querySelector('#profile-close').addEventListener('click', this.close.bind(this));
+    this.popupContainer.querySelector('#place-close').addEventListener('click', this.close.bind(this));
+    this.popupContainer.querySelector('#avatar-close').addEventListener('click', this.close.bind(this));
   }
 
   open() {
