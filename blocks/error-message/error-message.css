@@ -1,0 +1,12 @@
+
+.error-message {
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    opacity: 0;
+
+}
+
+.input-container__invalid .error-message {
+    opacity: 1;
+}

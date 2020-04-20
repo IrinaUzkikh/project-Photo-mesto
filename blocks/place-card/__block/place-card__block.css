@@ -1,0 +1,9 @@
+.place-card__block {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  }
+  
