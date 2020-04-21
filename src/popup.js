@@ -1,9 +1,6 @@
-class Popup {
+export class Popup {
   constructor(popupContainer) {
     this.popupContainer = popupContainer;
-    document.querySelector('#profile-close').addEventListener('click', this.close.bind(this));
-    document.querySelector('#place-close').addEventListener('click', this.close.bind(this));
-    document.querySelector('#avatar-close').addEventListener('click', this.close.bind(this));
   }
 
   open() {

@@ -1,5 +1,3 @@
-'use strict'
-
 const card = new Card();
 const placesList = new CardList(document.querySelector('.places-list'), card);
 const popupContainerPlace = new Popup(document.querySelector('#popup-place'));
@@ -179,6 +177,11 @@ document.querySelector('.places-list').addEventListener('click', (event) => {
     popupContainerCard.createImg(event);
 }
 })
+//слушатели закрытия попапов
+   document.querySelector('#profile-close').addEventListener('click', popupContainerProfile.close.bind(popupContainerProfile));
+   document.querySelector('#place-close').addEventListener('click', popupContainerPlace.close.bind(popupContainerPlace));
+   document.querySelector('#avatar-close').addEventListener('click', popupContainerAvatar.close.bind(popupContainerAvatar));
+   document.querySelector('#card-close').addEventListener('click', popupContainerCard.closeFormCard.bind(popupContainerCard));
 
 //слушатели валидации полей ввода
 document.querySelector('#namePlace').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
@@ -186,3 +189,14 @@ document.querySelector('#link').addEventListener('input', formValidator.setEvent
 document.querySelector('#name').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
 document.querySelector('#info').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
 document.querySelector('#avatar').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
+
+import "./style.css";
+import {Api} from './api.js';
+import {Card} from './card.js';
+import {CardList} from './cardList.js';
+import {FormValidator} from './formValidator.js';
+import {Popup} from './popup.js';
+import {PopupAnotherButton} from './popupAnotherButton.js';
+import {PopupCard} from './popupCard.js';
+import {UserInfo} from './userInfo.js';
+export {userInfo};

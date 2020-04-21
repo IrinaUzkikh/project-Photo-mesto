@@ -1,10 +1,7 @@
-class PopupCard extends Popup {
-  constructor (popupContainer) {
-    super (popupContainer);
-    document.querySelector('#card-close').addEventListener('click', this.closeFormCard.bind(this));
-  }
+import {Popup} from './popup.js';
 
-    createImg(event) {
+export class PopupCard extends Popup {
+     createImg(event) {
       const cardImage = document.createElement('img');
       cardImage.setAttribute('id', 'img-popup');
       cardImage.classList.add("popup-card__image");
@@ -13,10 +10,10 @@ class PopupCard extends Popup {
       cardImage.alt = "card";
       this.popupContainer.firstElementChild.appendChild(cardImage);
     }
-    
-    closeFormCard() {
+     closeFormCard() {
       this.close();
       this.popupContainer.querySelector('#img-popup').remove();
     }
 }
+
   

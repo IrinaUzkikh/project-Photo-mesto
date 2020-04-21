@@ -1,4 +1,6 @@
-class Card {
+import {userInfo} from './index.js';
+
+export class Card {
     
     create(card) {
       const placeCard = document.createElement("div");

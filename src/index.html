@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./style.css">
+ 
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="../images/logo.svg" alt="mesto logo" class="logo">
+     <img src="<%=require('../images/logo.svg').default%>" alt="mesto logo" class="logo">
+    
     </header>
-    <div class="profile root__section">
+  <div class="profile root__section">
       <div class="user-info">
         <div id = "edit-avatar" class="user-info__photo"></div>
         <div class="user-info__data">
@@ -28,7 +29,7 @@
     </div>
     <div id = "popup-place" class="popup">
      <div class="popup__content">
-        <img id = "place-close" src="../images/close.svg" alt="" class="popup__close">
+        <img id = "place-close" src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" novalidate name="new">
           <div class = "input-container">
@@ -47,7 +48,7 @@
     </div>
     <div id = "popup-profile" class="popup">
       <div class="popup__content">
-        <img id = "profile-close" src="../images/close.svg" alt="" class="popup__close">
+        <img id = "profile-close" src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" novalidate name="profile">
           <div class = "input-container">
@@ -64,7 +65,7 @@
     </div>
     <div id = "popup-avatar" class="popup">
       <div class="popup__content">
-         <img id = "avatar-close" src="../images/close.svg" alt="" class="popup__close">
+         <img id = "avatar-close" src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
          <h3 class="popup__title">Обновить аватар</h3>
          <form class="popup__form" novalidate name="avatar">
            <div class = "input-container">
@@ -79,22 +80,11 @@
      </div>
     <div id = "popup-card" class = "popup">
       <div class = "popup-card__content">
-          <img id = "card-close" src="../images/close.svg" alt="" class="popup-card__close">
+          <img id = "card-close" src="<%=require('../images/close.svg').default%>" alt="" class="popup-card__close">
       </div>
     </div>
       
   </div>
-  
-  <script src="card.js"></script>
-  <script src="cardList.js"></script>
-  <script src="popup.js"></script>
-  <script src="popupCard.js"></script>
-  <script src="popupAnotherButton.js"></script>
-  <script src="userInfo.js"></script>
-  <script src="formValidator.js"></script>
-  <script src="api.js"></script>
-  <script src="index.js"></script>
-  
   
 </body>
 </html>
