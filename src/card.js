@@ -1,3 +1,5 @@
+import {userInfo} from './index.js';
+
 export class Card {
     
     create(card) {
@@ -19,13 +21,13 @@ export class Card {
       </div>`);
       
       placeCard.querySelector(".place-card__name").textContent = card.name;
-      //placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${card.link})`;
+      placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${card.link})`;
       placeCard.querySelector(".place-card__card-id").textContent = card.cardId;
       placeCard.querySelector(".place-card__user-id").textContent = card.userId;
       placeCard.querySelector(".place-card__count-like").textContent = card.countLike;
   
       if (placeCard.querySelector('.place-card__user-id').textContent === userInfo.getUserId) {
-        //placeCard.querySelector('.place-card__delete-icon').style.display = 'block';
+        placeCard.querySelector('.place-card__delete-icon').style.display = 'block';
       }
       if (card.signLike) {
         placeCard.querySelector('.place-card__like-icon').classList.toggle('place-card__like-icon_liked');

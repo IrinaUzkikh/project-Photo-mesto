@@ -1,10 +1,6 @@
-import {popupPlace as popupContainer} from './index';
 export class Popup {
   constructor(popupContainer) {
     this.popupContainer = popupContainer;
-    this.popupContainer.querySelector('#profile-close').addEventListener('click', this.close.bind(this));
-    this.popupContainer.querySelector('#place-close').addEventListener('click', this.close.bind(this));
-    this.popupContainer.querySelector('#avatar-close').addEventListener('click', this.close.bind(this));
   }
 
   open() {
