@@ -191,12 +191,12 @@ document.querySelector('#info').addEventListener('input', formValidator.setEvent
 document.querySelector('#avatar').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
 
 import "./style.css";
-import {Api} from './api.js';
-import {Card} from './card.js';
-import {CardList} from './cardList.js';
-import {FormValidator} from './formValidator.js';
-import {Popup} from './popup.js';
-import {PopupAnotherButton} from './popupAnotherButton.js';
-import {PopupCard} from './popupCard.js';
-import {UserInfo} from './userInfo.js';
+import {Api} from './js/api.js';
+import {Card} from './js/card.js';
+import {CardList} from './js/cardList.js';
+import {FormValidator} from './js/formValidator.js';
+import {Popup} from './js/popup.js';
+import {PopupAnotherButton} from './js/popupAnotherButton.js';
+import {PopupCard} from './js/popupCard.js';
+import {UserInfo} from './js/userInfo.js';
 export {userInfo};

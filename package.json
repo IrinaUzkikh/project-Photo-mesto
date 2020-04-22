@@ -2,8 +2,8 @@
   "name": "project-11-sprint",
   "homepage": "https://github.com/IrinaUzkikh/project-11-sprint#readme",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Project-Yandex_Practikum-11-sprint",
+  "main": "./src/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
