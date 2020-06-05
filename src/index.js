@@ -6,8 +6,10 @@ const popupContainerAvatar = new PopupAnotherButton(document.querySelector('#pop
 const popupContainerCard = new PopupCard(document.querySelector('#popup-card'));
 const formValidator = new FormValidator();
 const userInfo = new UserInfo();
+
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort9',
+  baseUrl: URL,
+  //baseUrl: 'https://praktikum.tk/cohort9',
   headers: {
     authorization: '444753df-33e6-45f8-9354-4bae456fab7c',
     'Content-Type': 'application/json'

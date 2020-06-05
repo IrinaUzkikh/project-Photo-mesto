@@ -31,7 +31,7 @@ module.exports = {
         ] 
       }, 
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jp?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -74,7 +74,10 @@ module.exports = {
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'URL': JSON.stringify(isDev ? 'http://praktikum.tk/cohort9' : 'https://praktikum.tk/cohort9')
+    }),
+   
   ]
+ 
 };
