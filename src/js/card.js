@@ -1,6 +1,6 @@
-import {userInfo} from '../index.js';
+import userInfo from '../index.js';
 
-export class Card {
+export default class Card {
     
     create(card) {
       const placeCard = document.createElement("div");
