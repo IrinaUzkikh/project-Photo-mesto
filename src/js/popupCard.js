@@ -1,6 +1,6 @@
-import {Popup} from './popup.js';
+import Popup from './popup.js';
 
-export class PopupCard extends Popup {
+export default class PopupCard extends Popup {
      createImg(event) {
       const cardImage = document.createElement('img');
       cardImage.setAttribute('id', 'img-popup');

@@ -1,4 +1,4 @@
-export class FormValidator {
+export default class FormValidator {
 
   activeButton(element) {
     element.classList.add('popup__button_active');

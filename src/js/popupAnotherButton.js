@@ -1,6 +1,6 @@
-import {Popup} from './popup.js';
+import Popup from './popup.js';
 
-export class PopupAnotherButton extends Popup {
+export default class PopupAnotherButton extends Popup {
 
       openPopup() {
       this.open();

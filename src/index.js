@@ -6,8 +6,11 @@ const popupContainerAvatar = new PopupAnotherButton(document.querySelector('#pop
 const popupContainerCard = new PopupCard(document.querySelector('#popup-card'));
 const formValidator = new FormValidator();
 const userInfo = new UserInfo();
+
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort9',
+  baseUrl: URL,
+  //baseUrl: 'https://praktikum.tk/cohort9',
+  baseUrl: 'https://nomoreparties.co/cohort9',
   headers: {
     authorization: '444753df-33e6-45f8-9354-4bae456fab7c',
     'Content-Type': 'application/json'
@@ -51,6 +54,7 @@ api.getInitialCards.bind(api)()
       })
       return { name, link, cardId, userId, countLike, signLike };
     });
+    console.log(arr);
     placesList.render.bind(placesList)(arr);
   })
   .catch((err) => {
@@ -191,12 +195,12 @@ document.querySelector('#info').addEventListener('input', formValidator.setEvent
 document.querySelector('#avatar').addEventListener('input', formValidator.setEventListeners.bind(formValidator));
 
 import "./style.css";
-import {Api} from './js/api.js';
-import {Card} from './js/card.js';
-import {CardList} from './js/cardList.js';
-import {FormValidator} from './js/formValidator.js';
-import {Popup} from './js/popup.js';
-import {PopupAnotherButton} from './js/popupAnotherButton.js';
-import {PopupCard} from './js/popupCard.js';
-import {UserInfo} from './js/userInfo.js';
-export {userInfo};
+import Api from './js/api.js';
+import Card from './js/card.js';
+import CardList from './js/cardList.js';
+import FormValidator from './js/formValidator.js';
+import Popup from './js/popup.js';
+import PopupAnotherButton from './js/popupAnotherButton.js';
+import PopupCard from './js/popupCard.js';
+import UserInfo from './js/userInfo.js';
+export default userInfo;
